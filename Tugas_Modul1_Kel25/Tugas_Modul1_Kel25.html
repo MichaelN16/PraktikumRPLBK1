@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Kelompok 25</title>
+</head>
+<body>
+    <h1>Program Cek nama Buah</h1>
+    <p><b>Syarat:</b></p>
+    <p>1. Masukan nama Buah yang terdiri dari 4 huruf</p>
+    <p>2. Jika nama Buah terdiri dari 4 huruf maka akan keluar Output: Tepat</p>
+    <p>3. Sebaliknya, apabila nama buah terdiri dari kurang atau lebih dari 4 huruf maka akan keluar output: Belum Tepat</p>
+<input type="text" id="namaBuah" placeholder="Masukan nama buah..." value="">
+<button onclick="validateBuah()">cek</button>
+    
+</body>
+</html>
+<script>
+function validateBuah() {
+  var namaBuah = Array.from(document.getElementById("namaBuah").value);
+  let lengthNamaBuah=0;
+  namaBuah.forEach((item) => {
+    lengthNamaBuah++
+});
+var pesanBuah= lengthNamaBuah!=4 ? 'Belum Tepat' : 'Tepat';
+console.log(pesanBuah);
+}
+</script>
